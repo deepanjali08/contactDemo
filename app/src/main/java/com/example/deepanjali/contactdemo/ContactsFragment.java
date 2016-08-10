@@ -102,7 +102,6 @@ public class ContactsFragment extends Fragment implements LoaderManager.LoaderCa
         mContactsList =
                 (ListView) getActivity().findViewById(R.id.list);
 
-        getLoaderManager().initLoader(0, null, this);
 
 
         // Gets a CursorAdapter
@@ -120,6 +119,8 @@ public class ContactsFragment extends Fragment implements LoaderManager.LoaderCa
 
         mContactsList.setOnItemClickListener(this);
 
+
+        getLoaderManager().initLoader(0, null, this);
 
     }
 
